@@ -17,7 +17,7 @@ inputs:
     description: "build output filename"
     required: true
     default: bundle.tar.gz
-  options:
+  build_options:
     description: "build options"
     required: false
 runs:
