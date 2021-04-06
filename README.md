@@ -1,24 +1,40 @@
 # aserto-build-action
 
-Aserto build bundle action
+## Aserto build policy pack action
+
 
 ## Inputs
 
 ### `source_path`
 
-**Required** The directory path to the input source to build. Default `"src"`.
+**Required** The directory path to the input source to build. 
+
+Default `"src"`
 
 ### `target_path`
 
-**Required** The directory path to the build output. Default `"build"`.
+**Required** The directory path to the build output. 
+
+Default `"build"`
 
 ### `target_file`
 
-**Required** The file path to the build output. Default `"bundle.tar.gz"`.
+**Required** The file path to the build output. 
 
-### `options`
+Default `"bundle.tar.gz"`
 
-Optional build options like --debug --optimize etc.
+### `build_options`
+
+Optional build options like --debug --optimize etc. 
+
+Default `"--revision $GITHUB_SHA"`
+
+### `verbose`
+
+Verbose logging of execution of action [true | false]. 
+
+Default `"false"`
 
 ## Outputs
 
+None defined

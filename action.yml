@@ -20,6 +20,11 @@ inputs:
   build_options:
     description: "build options"
     required: false
+    default: "--revision $GITHUB_SHA"
+  verbose:
+    description: "verbose logging [ true | false ]"
+    required: true
+    default: "false"
 runs:
   using: docker
   image: 'docker://ghcr.io/aserto-dev/aserto-build:latest'
