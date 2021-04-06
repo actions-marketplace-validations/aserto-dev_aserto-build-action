@@ -1,22 +1,25 @@
 name: "Aserto Build"
-description: "Aserto build bundle file"
-author: "Gert Drapers - Aserto.com"
+description: "Aserto build policy pack"
+author: "Aserto.com"
 branding:
   icon: box
   color: orange
 inputs:
-  source:
-    description: "filepath to build input source"
+  source_path:
+    description: "path to build input source"
     required: true
-    default: ./src
-  target:
-    description: "filepath to build output"
+    default: src
+  target_path:
+    description: "path to build output directory"
     required: true
-    default: ./build/bundle.tar.gz
+    default: build
+  target_file:
+    description: "build output filename"
+    required: true
+    default: bundle.tar.gz
   options:
     description: "build options"
     required: false
 runs:
   using: docker
-  image: Dockerfile
- 
+  image: 'docker://ghcr.io/aserto-dev/aserto-build:latest'

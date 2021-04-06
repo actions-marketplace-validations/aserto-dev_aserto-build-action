@@ -4,19 +4,21 @@ Aserto build bundle action
 
 ## Inputs
 
-### `source`
+### `source_path`
 
-**Required** The file path to the input source directory to build the bundle from. Default `"./src"`.
+**Required** The directory path to the input source to build. Default `"src"`.
 
-### `target`
+### `target_path`
 
-**Required** The file path to the build output. Default `"./build/bundle.tar.gz"`.
+**Required** The directory path to the build output. Default `"build"`.
+
+### `target_file`
+
+**Required** The file path to the build output. Default `"bundle.tar.gz"`.
 
 ### `options`
 
 Optional build options like --debug --optimize etc.
 
 ## Outputs
-
-
 
