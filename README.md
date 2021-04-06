@@ -33,7 +33,7 @@ Default `"--revision $GITHUB_SHA"`
 
 Verbose logging of execution of action [true | false]. 
 
-Default `"false"`
+Default `false`
 
 ## Outputs
 
