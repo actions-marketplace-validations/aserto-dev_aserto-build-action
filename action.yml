@@ -1,30 +1,33 @@
 name: "Aserto Build"
-description: "Aserto build policy pack"
+description: "Build policy bundle"
 author: "Aserto.com"
 branding:
   icon: box
   color: orange
 inputs:
   source_path:
-    description: "path to build input source"
+    description: "directory path to build input source"
     required: true
     default: src
   target_path:
-    description: "path to build output directory"
+    description: "directory path to build output directory"
     required: true
     default: build
   target_file:
     description: "build output filename"
     required: true
     default: bundle.tar.gz
-  build_options:
-    description: "build options"
+  revision:
+    description: "revision tag (GitHub SHA)"
     required: false
-    default: "--revision $GITHUB_SHA"
+  build_options:
+    description: "optional build options like --debug, --optimize, ..."
+    required: false
   verbose:
     description: "verbose logging [ true | false ]"
     required: true
     default: "false"
 runs:
   using: docker
-  image: 'docker://ghcr.io/aserto-dev/aserto-build:latest'
+  image: 'docker://ghcr.io/aserto-dev/aserto-one:action-v2'
+  entrypoint: /app/build.sh
